@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Home</h1>
+    <h1>Settings</h1>
     <Nav />
   </div>
 </template>
@@ -9,7 +9,7 @@
   import Nav from '../Shared/Nav'
 
   export default {
-    name: 'Home',
+    name: 'Settings',
     components: {
       Nav,
     },
