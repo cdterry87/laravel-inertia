@@ -1,7 +1,5 @@
 <template>
-  <Layout>
-    <h1>Settings</h1>
-  </Layout>
+  <h1>Settings</h1>
 </template>
 
 <script>
@@ -10,6 +8,7 @@
 
   export default {
     name: 'Settings',
+    layout: Layout,
     components: {
       Layout,
       Nav,
