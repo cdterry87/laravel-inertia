@@ -7,7 +7,7 @@
           <Nav />
         </div>
         <div class="mt-6 text-center">
-          <p>Welcome back, {{ username }}</p>
+          <p>Welcome back, {{ username }} ({{ Math.random() }})</p>
         </div>
       </header>
     </section>
