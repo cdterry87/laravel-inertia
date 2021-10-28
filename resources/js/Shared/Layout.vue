@@ -1,4 +1,8 @@
 <template>
+  <Head>
+    <title>My App</title>
+    <meta description="Information about my app" head-key="description" />
+  </Head>
   <div>
     <section class="p-6 bg-gray-200">
       <header>
