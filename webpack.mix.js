@@ -16,4 +16,5 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ])
+    .extract() // extracts vendor files into their own files when mix is run so vendor files can be cached longer than the app js file since those don't change as often
     .version();
