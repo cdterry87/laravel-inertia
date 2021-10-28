@@ -7,7 +7,7 @@
           <Nav />
         </div>
         <div class="mt-6 text-center">
-          <p>Welcome back, {{ username }} <input type="text" value="Test123"></p>
+          <p>Welcome back, {{ username }}</p>
         </div>
       </header>
     </section>

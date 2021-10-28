@@ -7,15 +7,14 @@
 </template>
 
 <script>
-  import Layout from '../Shared/Layout'
-  import Nav from '../Shared/Nav'
 
   export default {
     name: 'Users',
-    layout: Layout,
-    components: {
-      Layout,
-      Nav,
+    props: {
+      time: {
+        type: String,
+        required: true
+      },
     },
   }
 </script>
