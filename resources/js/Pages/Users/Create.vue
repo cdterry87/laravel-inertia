@@ -21,7 +21,7 @@
         <div v-if="errors.password" v-text="errors.password" class="text-red-500 text-xs mt-1"></div>
       </div>
       <div class="mb-6">
-        <button type="submit" class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500">Submit</button>
+        <button type="submit" class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 disabled:bg-gray-500" :disabled="processing">Submit</button>
       </div>
     </form>
   </div>
@@ -38,6 +38,7 @@
     },
     data() {
       return {
+        processing: false,
         form: {
           name: '',
           email: '',
@@ -47,7 +48,14 @@
     },
     methods: {
       submit() {
-        this.$inertia.post('/users', this.form)
+        this.$inertia.post('/users', this.form, {
+          onStart: () => {
+            this.processing = true
+          },
+          onFinish: () => {
+            this.processing = false
+          }
+        })
       }
     },
   }
