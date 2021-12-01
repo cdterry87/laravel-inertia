@@ -64,7 +64,7 @@
 <script>
 import Pagination from "../../Shared/Pagination.vue";
 import { Inertia } from "@inertiajs/inertia"
-import { throttle } from "lodash";
+import { debounce } from "lodash";
 
 export default {
   name: "UsersIndex",
@@ -87,7 +87,7 @@ export default {
     };
   },
   watch: {
-    search: throttle(function(value) {
+    search: debounce(function(value) {
       Inertia.get('/users', { search: value }, { preserveState: true, replace: true })
     }, 500)
   }

@@ -39,7 +39,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   watch: {
-    search: (0,lodash__WEBPACK_IMPORTED_MODULE_2__.throttle)(function (value) {
+    search: (0,lodash__WEBPACK_IMPORTED_MODULE_2__.debounce)(function (value) {
       _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia.get('/users', {
         search: value
       }, {
