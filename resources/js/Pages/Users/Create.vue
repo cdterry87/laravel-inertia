@@ -22,6 +22,7 @@
       </div>
       <div class="mb-6">
         <button type="submit" class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 disabled:bg-gray-500" :disabled="form.processing">Submit</button>
+        <button type="reset" class="bg-indigo-400 text-white rounded py-2 px-4 hover:bg-indigo-500 ml-4" @click.prevent="form.reset()">Reset</button>
       </div>
     </form>
   </div>
