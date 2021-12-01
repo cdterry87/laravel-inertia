@@ -7,7 +7,7 @@
     <div class="flex items-center">
       <h1 class="text-3xl">Users</h1>
 
-      <Link href="/users/create" class="text-blue-500 text-sm ml-3">
+      <Link v-if="can.createUser" href="/users/create" class="text-blue-500 text-sm ml-3">
         Create User
       </Link>
     </div>
@@ -33,6 +33,7 @@
                   {{ user.name }}
                 </td>
                 <td
+                  v-if="user.can.edit"
                   class="
                     px-6
                     py-4
@@ -74,6 +75,10 @@ export default {
       required: true,
     },
     filters: {
+      type: Object,
+      default: () => {},
+    },
+    can: {
       type: Object,
       default: () => {},
     },
