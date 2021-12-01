@@ -63,6 +63,8 @@
 
 <script>
 import Pagination from "../../Shared/Pagination.vue";
+import { Inertia } from "@inertiajs/inertia"
+import { throttle } from "lodash";
 
 export default {
   name: "UsersIndex",
@@ -85,18 +87,9 @@ export default {
     };
   },
   watch: {
-    search(value) {
-      this.$inertia.get(
-        "/users",
-        {
-          search: value,
-        },
-        {
-          preserveState: true,
-          replace: true,
-        }
-      );
-    },
-  },
+    search: throttle(function(value) {
+      Inertia.get('/users', { search: value }, { preserveState: true, replace: true })
+    }, 500)
+  }
 };
 </script>
