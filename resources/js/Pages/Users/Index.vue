@@ -4,7 +4,14 @@
   </Head>
 
   <div class="flex justify-between">
-    <h1>Users</h1>
+    <div class="flex items-center">
+      <h1 class="text-3xl">Users</h1>
+
+      <Link href="/users/create" class="text-blue-500 text-sm ml-3">
+        Create User
+      </Link>
+    </div>
+
     <input
       type="text"
       placeholder="Search..."
