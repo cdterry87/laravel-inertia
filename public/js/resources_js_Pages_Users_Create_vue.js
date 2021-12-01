@@ -15,7 +15,6 @@ __webpack_require__.r(__webpack_exports__);
   name: 'UsersCreate',
   data: function data() {
     return {
-      processing: false,
       form: this.$inertia.form({
         name: '',
         email: '',

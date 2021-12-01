@@ -33,7 +33,6 @@
     name: 'UsersCreate',
     data() {
       return {
-        processing: false,
         form: this.$inertia.form({
           name: '',
           email: '',
