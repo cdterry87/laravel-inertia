@@ -55,10 +55,10 @@
 </template>
 
 <script>
-import Pagination from "../Shared/Pagination.vue";
+import Pagination from "../../Shared/Pagination.vue";
 
 export default {
-  name: "Users",
+  name: "UsersIndex",
   props: {
     users: {
       type: Object,
